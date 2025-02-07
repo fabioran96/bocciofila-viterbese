@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "./assets/Bocciofila Viterbese logo.png"; // Mantieni il percorso del logo
 import "./Homepage.css"; // Usa gli stessi stili
-import CursorFollower from "./cursorFollower";
+import CursorFollower from "./CursorEffect";
 
 
 
