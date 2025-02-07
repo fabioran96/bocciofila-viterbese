@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./CursorFollower.css";
-import boccia from "./assets/boccia.png"; // Percorso corretto per l'immagine
 
 const CursorFollower: React.FC = () => {
   useEffect(() => {
