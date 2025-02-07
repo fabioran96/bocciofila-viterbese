@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Homepage.css"; 
 import logo from "./assets/Bocciofila Viterbese logo.png"; 
 import heroLogo from "./assets/LogoIntero.jpg";
@@ -8,13 +8,7 @@ const Homepage: React.FC = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleScroll = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setMenuOpen(false);
-    }
-  };
+  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setMenuOpen(false);
