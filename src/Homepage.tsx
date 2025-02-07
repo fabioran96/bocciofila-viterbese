@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Homepage.css"; 
-import CursorFollower from "./cursorFollower";
+import CursorFollower from "./CursorFollower";
 import logo from "./assets/Bocciofila Viterbese logo.png"; 
 import heroLogo from "./assets/logo-intero.png";
 
