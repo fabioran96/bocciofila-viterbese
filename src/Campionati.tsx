@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "./Layout";
+import "./Global.css"
 
 const Campionati: React.FC = () => {
   return (

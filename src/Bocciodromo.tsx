@@ -1,6 +1,7 @@
 import React from "react";
 import "./Homepage.css"
 import Layout from "./Layout";
+import "./Global.css"
 
 const Bocciodromo: React.FC = () => {
   return (
