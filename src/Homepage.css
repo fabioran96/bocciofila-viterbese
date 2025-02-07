@@ -140,6 +140,18 @@
     margin: 0.5rem 0;
   }
 
+  .custom-cursor {
+    width: 20px; /* Dimensione */
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Colore */
+    border-radius: 50%; /* Rende il cerchio rotondo */
+    position: absolute;
+    pointer-events: none; /* Evita interferenze */
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s ease-out; /* Movimento fluido */
+    z-index: 9999; /* Sempre sopra gli altri elementi */
+  }
+
 /* Media query per schermi più piccoli di 768px (tablet e smartphone) */
 @media (max-width: 768px) {
     .hero {

@@ -1,22 +1,24 @@
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import "./Homepage.css"; 
 import logo from "./assets/Bocciofila Viterbese logo.png"; 
 import heroLogo from "./assets/LogoIntero.jpg";
 
 const Homepage: React.FC = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+  
 
-    const handleScroll = (id: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-          setMenuOpen(false);
-        }
-      };
-    const scrollToTop = () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-            setMenuOpen(false);
-      };
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false);
+    }
+  };
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setMenuOpen(false);
+  };
   return (
     <div className="homepage">
       {/* Header */}
@@ -35,12 +37,12 @@ const Homepage: React.FC = () => {
           ☰
         </button>
         <nav className={`homepage-nav ${menuOpen ? "open" : ""}`}>
-          <button onClick={() => handleScroll("about")}>Chi siamo</button>
-          <button onClick={() => handleScroll("bocciodromo")}>Bocciodromo</button>
-          <button onClick={() => handleScroll("campionati")}>Campionati</button>
-          <button onClick={() => handleScroll("contact")}>Contatti</button>
-          <button onClick={() => handleScroll("sponsor")}>Sponsor</button>
-        </nav>
+  <button onClick={() => (window.location.href = "/chi-siamo")}>Chi siamo</button>
+  <button onClick={() => (window.location.href = "/bocciodromo")}>Bocciodromo</button>
+  <button onClick={() => (window.location.href = "/campionati")}>Campionati</button>
+  <button onClick={() => (window.location.href = "/contatti")}>Contatti</button>
+  <button onClick={() => (window.location.href = "/sponsor")}>Sponsor</button>
+</nav>
       </header>
 
       {/* Hero Section */}
