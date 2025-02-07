@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import logo from "./assets/Bocciofila Viterbese logo.png"; // Mantieni il percorso del logo
 import "./Homepage.css"; // Usa gli stessi stili
+import CursorFollower from "./cursorFollower";
+
+
 
 interface LayoutProps {
   children: React.ReactNode;
+ 
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -16,6 +20,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="layout">
+        <CursorFollower /> 
       {/* Header */}
       <header className="homepage-header">
         <img
@@ -39,6 +44,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <button onClick={() => (window.location.href = "/sponsor")}>Sponsor</button>
         </nav>
       </header>
+
+      <section className="hero-small">
+        <img
+          src={logo}
+          alt="Hero Logo Bocciofila Viterbese"
+          className="hero-logo-small"
+        />
+      </section>
 
       {/* Contenuto principale */}
       <main>{children}</main>

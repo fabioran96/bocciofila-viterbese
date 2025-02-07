@@ -62,7 +62,16 @@
     max-width: 100%; /* Adatta la larghezza dell'immagine alla dimensione del contenitore */
     height: auto; /* Mantiene le proporzioni dell'immagine */
     border-radius: 10px; /* Opzionale: angoli arrotondati */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opzionale: aggiunge un'ombra */
+  }
+
+
+  .hero-logo-small {
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    
   }
   
   .hero-content {
@@ -151,6 +160,17 @@
     transition: transform 0.05s ease-out; /* Movimento fluido */
     z-index: 9999; /* Sempre sopra gli altri elementi */
   }
+
+  .facebook-feed {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .facebook-feed .fb-page {
+    margin: 0 auto;
+  }
+
+
 
 /* Media query per schermi più piccoli di 768px (tablet e smartphone) */
 @media (max-width: 768px) {

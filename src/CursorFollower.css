@@ -1,0 +1,22 @@
+/* CursorFollower.css */
+
+/* Nascondi il cursore predefinito del browser */
+body {
+    cursor: none;
+  }
+  
+  /* Boccia che segue il cursore */
+  .cursor-follower {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px; /* Dimensione della boccia */
+    height: 50px;
+    background-image: url("./assets/boccia.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none; /* Evita interferenze */
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s ease-out; /* Movimento fluido */
+    z-index: 9999; /* Sempre sopra tutti gli altri elementi */
+  }

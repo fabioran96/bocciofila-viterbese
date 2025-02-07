@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Homepage.css"; 
+import CursorFollower from "./cursorFollower";
 import logo from "./assets/Bocciofila Viterbese logo.png"; 
-import heroLogo from "./assets/LogoIntero.jpg";
+import heroLogo from "./assets/logo-intero.png";
 
 const Homepage: React.FC = () => {
   
@@ -15,6 +16,7 @@ const Homepage: React.FC = () => {
   };
   return (
     <div className="homepage">
+       <CursorFollower /> {/* Cursore personalizzato */}
       {/* Header */}
       <header className="homepage-header">
       <img
@@ -36,13 +38,15 @@ const Homepage: React.FC = () => {
   <button onClick={() => (window.location.href = "/campionati")}>Campionati</button>
   <button onClick={() => (window.location.href = "/contatti")}>Contatti</button>
   <button onClick={() => (window.location.href = "/sponsor")}>Sponsor</button>
-</nav>
-      </header>
+ </nav>
+  </header>
 
       {/* Hero Section */}
       <section className="hero">
         <img src= {heroLogo} alt="ASD Bocciofila Viterbese" className="hero-image" />
       </section>
+
+      
 
        {/* Chi siamo */}
        <section id="about" className="section">
