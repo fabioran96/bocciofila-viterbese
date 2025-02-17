@@ -3,6 +3,9 @@ import "./Homepage.css";
 import CursorFollower from "./CursorEffect";
 import logo from "./assets/Bocciofila Viterbese logo.png"; 
 import heroLogo from "./assets/logo-intero.png";
+import GoogleMapsComponent from "./GoogleMaps";
+import { Button } from "react-bootstrap";
+
 
 const Homepage: React.FC = () => {
   
@@ -51,13 +54,15 @@ const Homepage: React.FC = () => {
        {/* Chi siamo */}
        <section id="about" className="section">
         <h2>Chi siamo</h2>
-        <p>Siamo una realtà sportiva dedicata alla passione per le bocce...</p>
+        <p>Siamo il punto di riferimento a Viterbo e provincia per il nobile gioco delle bocce. Come società partecipiamo a competizioni di serie A, B, C.</p>
+        <button onClick={() => (window.location.href = "/chi-siamo")}>Scopri di più</button>
       </section>
 
       {/* Bocciodromo */}
       <section id="bocciodromo" className="section">
         <h2>Bocciodromo</h2>
-        <p>Scopri il nostro bocciodromo attrezzato per competizioni e allenamenti...</p>
+        <p>Scopri il nostro bocciodromo attrezzato per competizioni e allenamenti</p>
+        <button onClick={() => (window.location.href = "/bocciodromo")}>Vai alla Gallery</button>
       </section>
 
       {/* Campionati */}
@@ -69,7 +74,10 @@ const Homepage: React.FC = () => {
       {/* Contatti */}
       <section id="contact" className="section">
         <h2>Contatti</h2>
-        <p>Contattaci per maggiori informazioni o per venire a trovarci...</p>
+        <p>Ci troviamo in Via Beata Maria de Mattias, lungo strada Teverina, adiacente alla Polisportiva Tuscia Santa Barbara "Da Meschini". </p>
+        <p>Email: </p>
+        <p>Telefono: </p>
+        <GoogleMapsComponent /> {/* Componente Google Maps */}
       </section>
 
       {/* Footer */}

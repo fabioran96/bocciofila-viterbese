@@ -7,3 +7,32 @@
     
 }
 
+.google-map-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+
+  .simple-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .simple-table th, .simple-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .simple-table th {
+    background-color: #003399;
+    color: white;
+  }
+  
+  .simple-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }

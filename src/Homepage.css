@@ -112,6 +112,14 @@
     font-size: 1.2rem;
     color: #333;
   }
+
+  .google-map-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
   
   /* Per rendere l'header fisso e migliorare l'esperienza di scorrimento */
   .homepage-header {
