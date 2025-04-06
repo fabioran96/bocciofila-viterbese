@@ -1,4 +1,4 @@
-/* Homepage.css */
+
 .homepage {
     text-align: center;
     font-family: Arial, sans-serif;
@@ -33,6 +33,65 @@
      transition: all 0.3s ease; /* Aggiunge una transizione morbida per hover */
   }
 
+  .background-gallery {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    opacity: 0.3;
+    animation: kenburns 30s ease-in-out infinite alternate;
+  }
+  
+  @keyframes kenburns {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  .background-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    pointer-events: none;
+    transform: scale(1);
+  }
+
+  .background-slide.active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+  }
+  
+  .hero-image {
+    position: relative;
+    z-index: 1; /* Più alto della gallery */
+    width: 80%; /* dimensiona come vuoi il logo */
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px; /* Opzionale: angoli arrotondati */
+  }
+
   .menu-toggle {
     display: none; /* Nascondilo di default */
     background-color: #ffffff;
@@ -52,18 +111,11 @@
   .hero {
     background-color: #ffd700; /* Giallo Bocciofila */
     color: #003399; /* Blu Bocciofila */
-    padding: 3rem 1rem;
+    padding: 1rem 1rem; /* Ridotto per evitare di spingere il contenuto verso il basso */
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
-  .hero-image {
-    max-width: 100%; /* Adatta la larghezza dell'immagine alla dimensione del contenitore */
-    height: auto; /* Mantiene le proporzioni dell'immagine */
-    border-radius: 10px; /* Opzionale: angoli arrotondati */
-  }
-
 
   .hero-logo-small {
     width: 200px;

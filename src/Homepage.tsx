@@ -1,18 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Homepage.css"; 
 import CursorFollower from "./CursorEffect";
 import logo from "./assets/Bocciofila Viterbese logo.png"; 
 import heroLogo from "./assets/logo-intero.png";
 import GoogleMapsComponent from "./GoogleMaps";
-import { Button } from "react-bootstrap";
 
 
 const Homepage: React.FC = () => {
   
-
   const [menuOpen, setMenuOpen] = useState(false);
-
   
+  const immagini = [
+    "/assets/foto1.JPG",
+    "/assets/foto2.JPG",
+    "/assets/foto3.JPG",
+    "/assets/foto4.JPG",
+    "/assets/foto6.JPG",
+    "/assets/foto7.JPG",
+    "/assets/foto8.JPG",
+    "/assets/foto9.JPG",
+    "/assets/foto10.JPG"
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % immagini.length);
+    }, 4000); // change every 4 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setMenuOpen(false);
@@ -46,7 +64,19 @@ const Homepage: React.FC = () => {
 
       {/* Hero Section */}
       <section className="hero">
-        <img src= {heroLogo} alt="ASD Bocciofila Viterbese" className="hero-image" />
+        <div className="hero-container">
+          <div className="background-gallery">
+            {immagini.map((src, idx) => (
+              <img
+                key={idx}
+                src={src}
+                alt={`Bocciodromo ${idx + 1}`}
+                className={`background-slide ${idx === currentImageIndex ? "active" : ""}`}
+              />
+            ))}
+          </div>
+          <img src={heroLogo} alt="ASD Bocciofila Viterbese" className="hero-image" />
+        </div>
       </section>
 
       
